@@ -53,14 +53,10 @@ namespace Lab12.ViewModels
             }
         }
 
-        //comandos
+        //Activamos los Comandos
         public ICommand Guardar { protected set; get; }
 
         public ICommand Listar { protected set; get; }
-
-        //public List<string> MuchosDatos { protected set; get; }
-        //los datos calculado no se agregan en el modelo pero si en el viewmodel
-        //propiedad de listas
 
         ObservableCollection<TaskModel> task;
         public ObservableCollection<TaskModel> Tasks
