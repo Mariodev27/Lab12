@@ -4,11 +4,12 @@ using System.Text;
 
 namespace Lab12.Models
 {
-    internal class TaskModel
+    public class TaskModel
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public bool IsCompleted { get; set; }
+        public string title { get; set; }
+        public string description { get; set; }
+        public string status { get; set; }
+
+        public TaskModel() { }
     }
 }

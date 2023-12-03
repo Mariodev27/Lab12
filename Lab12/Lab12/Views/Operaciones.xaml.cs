@@ -15,6 +15,7 @@ namespace Lab12.Views
         public Operaciones()
         {
             InitializeComponent();
+            this.BindingContext = new ViewModels.OperacionesViewModel();
         }
     }
 }

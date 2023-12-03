@@ -14,7 +14,6 @@ namespace Lab12
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new TaskViewModel();
         }
     }
 }

@@ -2,11 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lab12.Views.Operaciones">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout Padding="60">
+        <Label Text="Lab 12" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+        <Label Text="Title:" FontSize="Subtitle" FontAttributes="Bold"/>
+        <Entry Placeholder="entry titulo" Text="{Binding Title}"></Entry>
+        <Label Text="Description:" FontSize="Subtitle" FontAttributes="Bold" ></Label>
+        <Entry Placeholder="entry dsc" Text="{Binding Description}"></Entry>
+        <Label Text="Status" FontSize="Subtitle" FontAttributes="Bold"></Label>
+        <Entry Placeholder="entry Status:" Text="{Binding Status}"></Entry>
+        <Button Text="Save" FontAttributes="Bold" BackgroundColor="SkyBlue" TextColor="White" Command="{Binding Guardar}"></Button>
+        <Button Text="To List" FontAttributes="Bold" BackgroundColor="ForestGreen" Command="{Binding Listar}"></Button>
+        <ListView ItemsSource="{Binding Tasks}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                                <Label Text="{Binding title}" TextColor="Black" FontSize="Subtitle"></Label>
+                                <Label Text="{Binding description}" TextColor="Black" FontSize="Caption"></Label>
+                                <Label Text="{Binding status}" TextColor="Black" FontSize="Caption"></Label>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
